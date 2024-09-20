@@ -114,6 +114,14 @@ alias l.="eza -a | grep -E '^\.'"
 #alias for zoxide
 alias cd='z'
 
+# bat alias
+alias cat='bat'
+alias fz='fzf --preview="bat --color=always {}"'
+alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
+
+#leetcode alias
+alias leetcode='nvim leetcode.nvim'
+
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
