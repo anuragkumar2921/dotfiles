@@ -73,6 +73,7 @@ alias push="git push"
 alias gl="git log"
 alias ga="git add"
 alias gco="git commit -m"
+alias lg="lazygit"
 
 
 #alias
