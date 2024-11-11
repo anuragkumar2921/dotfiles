@@ -85,7 +85,7 @@ alias c="clear"
 #tmux alias
 alias detach="tmux detach"
 alias new="tmux new -s "
-alias attach="tmux attach -t "
+alias attach="tmux attach -t"
 
 #brew alias
 alias bs="brew search"
