@@ -47,7 +47,7 @@ for package in "${packages[@]}"; do
     echo "✅ $package is already installed. Skipping."
   else
     echo "Installing $package..."
-    if brew install $package; then
+    if brew install "$package"; then
       echo "✅ Successfully installed $package"
     else
       echo "❌ Failed to install $package" >&2
@@ -69,10 +69,7 @@ mkdir -p "$HOME/.config"
 zshrc_backup="$HOME/.zshrc_backup_$(date +%Y%m%d_%H%M%S)"
 if [ -f "$HOME/.zshrc" ]; then
   echo "Backing up existing .zshrc file to $zshrc_backup"
-  cp "$HOME/.zshrc" "$zshrc_backup"
-else
-  echo "No existing .zshrc found, creating a new one."
-  touch "$HOME/.zshrc" # Create an empty .zshrc file if it doesn’t exist
+  mv "$HOME/.zshrc" "$zshrc_backup"
 fi
 
 # Clone dotfiles repo and set up symlinks with stow
@@ -85,9 +82,5 @@ cd dotfiles
 
 # Using GNU stow to create symlinks
 stow .
-
-# Cleanup Homebrew cache
-echo "Cleaning up Homebrew cache..."
-brew cleanup
 
 echo "All installations and configurations completed successfully!"
