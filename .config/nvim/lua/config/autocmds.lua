@@ -5,7 +5,7 @@
 -- Auto-organize imports on save for multiple languages
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 	group = vim.api.nvim_create_augroup("auto_imports", { clear = true }),
-	pattern = { "*.java" },
+	pattern = { "*.java", "*.sh" },
 	callback = function()
 		vim.lsp.buf.code_action({
 			apply = true,
