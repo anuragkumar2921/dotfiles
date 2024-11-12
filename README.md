@@ -33,3 +33,20 @@ then use GNU stow to create symlinks
 ```
 stow .
 ```
+## Tmux Installation
+start a tmux session name - test
+```
+new test
+```
+attach to tmux session
+```
+attach test
+```
+source the tmux conf
+```
+tmux source tmux.
+```
+reload tmux environment
+```
+prefix + I
+```
