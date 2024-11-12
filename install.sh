@@ -56,16 +56,14 @@ for package in "${packages[@]}"; do
   fi
 done
 
-# Backup and create .config directory
+# Backup .config directory
 backup_dir="$HOME/.config_backup_$(date +%Y%m%d_%H%M%S)"
 if [ -d "$HOME/.config" ]; then
   echo "Backing up existing .config directory to $backup_dir"
   mv "$HOME/.config" "$backup_dir"
 fi
-echo "Creating a new .config directory"
-mkdir -p "$HOME/.config"
 
-# Backup .zshrc file and create a new one if it doesn't exist
+# Backup .zshrc file if it exists
 zshrc_backup="$HOME/.zshrc_backup_$(date +%Y%m%d_%H%M%S)"
 if [ -f "$HOME/.zshrc" ]; then
   echo "Backing up existing .zshrc file to $zshrc_backup"
@@ -80,7 +78,10 @@ git clone git@github.com/anuragkumar2921/dotfiles.git || {
 }
 cd dotfiles
 
-# Using GNU stow to create symlinks
 stow .
+
+# Cleanup Homebrew cache
+echo "Cleaning up Homebrew cache..."
+brew cleanup
 
 echo "All installations and configurations completed successfully!"
