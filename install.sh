@@ -81,6 +81,14 @@ cd dotfiles
 # Using GNU stow to create symlinks
 stow .
 
+# Clone tmux plugin manager (tpm) if it doesn’t already exist
+if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
+  echo "Cloning tmux plugin manager (tpm)..."
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+else
+  echo "tmux plugin manager (tpm) is already installed."
+fi
+
 # Cleanup Homebrew cache
 echo "Cleaning up Homebrew cache..."
 brew cleanup
