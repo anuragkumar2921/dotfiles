@@ -78,6 +78,7 @@ git clone git@github.com/anuragkumar2921/dotfiles.git || {
 }
 cd dotfiles
 
+# Using GNU stow to create symlinks
 stow .
 
 # Cleanup Homebrew cache
