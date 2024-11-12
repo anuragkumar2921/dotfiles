@@ -123,6 +123,10 @@ alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
 #leetcode alias
 alias leetcode='nvim leetcode.nvim'
 
+# ranger
+export VISUAL=nvim;
+export EDITOR=nvim;
+
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
