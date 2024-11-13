@@ -127,6 +127,9 @@ alias leetcode='nvim leetcode.nvim'
 export VISUAL=nvim;
 export EDITOR=nvim;
 
+#load secret
+export OPENAI_API_KEY=$(<~/gpt_secret.txt)
+
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
