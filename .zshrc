@@ -72,13 +72,14 @@ alias pull="git pull"
 alias push="git push"
 alias gl="git log"
 alias ga="git add"
+alias gr="git restore"
 alias gco="git commit -m"
 alias lg="lazygit"
 
 
 #alias
 alias src="source ~/.zshrc"
-alias vsh="vim ~/.zshrc" 
+alias vsh="nvim ~/.zshrc" 
 alias hs="history | grep"
 alias c="clear"
 
@@ -97,6 +98,7 @@ alias f="fd --type f --hidden --exclude .git | fzf | xargs nvim"
 
 # vim aliases
 alias vim="nvim"
+alias v="nvim"
 
 # export WORDCHARS='*?_-.[]~&;!#$%^(){}<>'
 export WORDCHARS='*?_[]~&;!#$%^(){}<>'
@@ -129,6 +131,9 @@ export EDITOR=nvim;
 
 #load secret
 export OPENAI_API_KEY=$(<~/gpt_secret.txt)
+
+# starship config
+export STARSHIP_CONFIG=~/.config/starship.toml
 
 # Shell integrations
 eval "$(fzf --zsh)"
