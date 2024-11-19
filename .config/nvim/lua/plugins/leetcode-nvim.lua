@@ -15,5 +15,7 @@ return {
 		-- configuration goes here
 		---@type lc.lang
 		lang = "java",
+		---@type boolean
+		image_support = true,
 	},
 }

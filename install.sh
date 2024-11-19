@@ -34,6 +34,7 @@ packages=(
   "fzf"
   "fd"
   "ripgrep"
+  "imagemagick"
 )
 
 # Function to check if a package is already installed

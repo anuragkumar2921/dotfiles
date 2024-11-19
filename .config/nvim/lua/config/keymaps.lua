@@ -17,6 +17,17 @@ keymap.set("n", "N", "Nzzzv")
 -- paste without storing it into register
 keymap.set("x", "<leader>p", [["_dP]])
 
+-- <leader><C-a> to increment the number.
+-- By default, C-a is the shortcut. Since, tmux prefix is C-a, its coliding
+vim.keymap.set("n", "<leader><C-a>", "<C-a>", { noremap = true, silent = true, desc = "Increment number (Ctrl-A)" })
+
+-- increment/ decrement the size of window
+-- Resize window using arrow keys
+keymap.set("n", "<Up>", ":resize +2<CR>", { noremap = true, silent = true })
+keymap.set("n", "<Down>", ":resize -2<CR>", { noremap = true, silent = true })
+keymap.set("n", "<Right>", ":vertical resize +2<CR>", { noremap = true, silent = true })
+keymap.set("n", "<Left>", ":vertical resize -2<CR>", { noremap = true, silent = true })
+
 -- Leetcode keymaps
 keymap.set("", "<leader>'", ":Leet run<CR>", { noremap = true, silent = true })
 keymap.set("", "<leader><CR>", ":Leet submit<CR>", { noremap = true, silent = true })
