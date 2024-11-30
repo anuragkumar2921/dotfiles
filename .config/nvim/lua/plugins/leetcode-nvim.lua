@@ -16,6 +16,6 @@ return {
 		---@type lc.lang
 		lang = "java",
 		---@type boolean
-		image_support = true,
+		image_support = false,
 	},
 }

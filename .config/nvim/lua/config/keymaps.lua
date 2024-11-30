@@ -3,6 +3,7 @@
 -- Add any additional keymaps here
 
 local keymap = vim.keymap -- for conciseness
+local opts = { noremap = true, silent = true }
 
 -- keymap shortcuts
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -19,15 +20,17 @@ keymap.set("x", "<leader>p", [["_dP]])
 
 -- <leader><C-a> to increment the number.
 -- By default, C-a is the shortcut. Since, tmux prefix is C-a, its coliding
-vim.keymap.set("n", "<leader><C-a>", "<C-a>", { noremap = true, silent = true, desc = "Increment number (Ctrl-A)" })
+-- Increment/decrement
+keymap.set("n", "+", "<C-a>")
+keymap.set("n", "-", "<C-x>")
 
 -- increment/ decrement the size of window
 -- Resize window using arrow keys
-keymap.set("n", "<Up>", ":resize +2<CR>", { noremap = true, silent = true })
-keymap.set("n", "<Down>", ":resize -2<CR>", { noremap = true, silent = true })
-keymap.set("n", "<Right>", ":vertical resize +2<CR>", { noremap = true, silent = true })
-keymap.set("n", "<Left>", ":vertical resize -2<CR>", { noremap = true, silent = true })
+keymap.set("n", "<Up>", ":resize +2<CR>", opts)
+keymap.set("n", "<Down>", ":resize -2<CR>", opts)
+keymap.set("n", "<Right>", ":vertical resize +2<CR>", opts)
+keymap.set("n", "<Left>", ":vertical resize -2<CR>", opts)
 
 -- Leetcode keymaps
-keymap.set("", "<leader>'", ":Leet run<CR>", { noremap = true, silent = true })
-keymap.set("", "<leader><CR>", ":Leet submit<CR>", { noremap = true, silent = true })
+keymap.set("", "<leader>'", ":Leet run<CR>", opts)
+keymap.set("", "<leader><CR>", ":Leet submit<CR>", opts)

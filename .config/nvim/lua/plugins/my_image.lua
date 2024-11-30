@@ -25,23 +25,23 @@
 -- package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua"
 
 return {
-	{
-		-- luarocks.nvim is a Neovim plugin designed to streamline the installation
-		-- of luarocks packages directly within Neovim. It simplifies the process
-		-- of managing Lua dependencies, ensuring a hassle-free experience for
-		-- Neovim users.
-		-- https://github.com/vhyrro/luarocks.nvim
-		"vhyrro/luarocks.nvim",
-		-- this plugin needs to run before anything else
-		priority = 1001,
-		opts = {
-			rocks = { "magick" },
-		},
-	},
+	-- {
+	-- 	-- luarocks.nvim is a Neovim plugin designed to streamline the installation
+	-- 	-- of luarocks packages directly within Neovim. It simplifies the process
+	-- 	-- of managing Lua dependencies, ensuring a hassle-free experience for
+	-- 	-- Neovim users.
+	-- 	-- https://github.com/vhyrro/luarocks.nvim
+	-- 	"vhyrro/luarocks.nvim",
+	-- 	-- this plugin needs to run before anything else
+	-- 	priority = 1001,
+	-- 	opts = {
+	-- 		rocks = { "magick" },
+	-- 	},
+	-- },
 	{
 		"3rd/image.nvim",
 		enabled = true,
-		dependencies = { "luarocks.nvim" },
+		-- dependencies = { "luarocks.nvim" },
 		config = function()
 			require("image").setup({
 				backend = "kitty",
@@ -58,12 +58,12 @@ return {
 						-- cursor is at
 						-- I set this to true, because if the file has way too many images
 						-- it will be laggy and will take time for the initial load
-						-- only_render_image_at_cursor = true,
+						only_render_image_at_cursor = true,
 						-- markdown extensions (ie. quarto) can go here
 						filetypes = { "markdown", "vimwiki", "html" },
 					},
 					neorg = {
-						enabled = true,
+						enabled = false,
 						clear_in_insert_mode = false,
 						download_remote_images = true,
 						only_render_image_at_cursor = false,
@@ -74,8 +74,8 @@ return {
 					-- Make sure you have an html treesitter parser installed
 					-- ~/github/dotfiles-latest/neovim/neobean/lua/plugins/treesitter.lua
 					html = {
-						enabled = true,
-						-- only_render_image_at_cursor = true,
+						enabled = false,
+						only_render_image_at_cursor = true,
 						-- Enabling "markdown" below allows you to view html images in .md files
 						-- https://github.com/3rd/image.nvim/issues/234
 						-- filetypes = { "html", "xhtml", "htm", "markdown" },
@@ -86,7 +86,7 @@ return {
 					-- Make sure you have a css treesitter parser installed
 					-- ~/github/dotfiles-latest/neovim/neobean/lua/plugins/treesitter.lua
 					css = {
-						enabled = true,
+						enabled = false,
 					},
 				},
 				max_width = nil,
