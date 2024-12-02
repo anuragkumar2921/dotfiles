@@ -9,14 +9,14 @@ return {
 	},
 	{
 		"nvim-lualine/lualine.nvim",
-		enabled = false,
+		enabled = true,
 	},
 	{
 		"folke/noice.nvim",
-		enabled = false,
+		enabled = true,
 	},
 	{
 		"tjdevries/express_line.nvim",
-		enabled = true,
+		enabled = false,
 	},
 }
