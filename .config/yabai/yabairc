@@ -23,7 +23,7 @@ yabai -m config window_gap                   8
 yabai -m config window_opacity on
 
 apps_transparent="(Notes|Reminders|Music)"
-less_transparent="(kitty)"
+less_transparent="()"
 all_transparent="(${apps_transparent}|${less_transparent})"
 
 # For transparent apps

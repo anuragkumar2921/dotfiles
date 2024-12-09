@@ -6,17 +6,17 @@ exec > >(tee -i install_log.txt) 2>&1
 
 echo "Starting installation script..."
 
+# Check if Homebrew is installed, install if missing
+if ! command -v brew &>/dev/null; then
+  echo "Homebrew is not installed. Please install Homebrew first !"
+  exit 1
+else
+  echo "Homebrew is installed."
+fi
+
 # Update Homebrew
 echo "Updating Homebrew..."
 brew update
-
-# Check if Homebrew is installed, install if missing
-if ! command -v brew &>/dev/null; then
-  echo "Homebrew is not installed. Installing Homebrew..."
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-else
-  echo "Homebrew is already installed."
-fi
 
 # List of packages to install, including stow
 packages=(
@@ -34,7 +34,7 @@ packages=(
   "fzf"
   "fd"
   "ripgrep"
-  "imagemagick"
+  # "imagemagick" #optional
 )
 
 # Function to check if a package is already installed
