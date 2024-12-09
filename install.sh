@@ -74,7 +74,7 @@ fi
 # Clone dotfiles repo and set up symlinks with stow
 echo "Cloning dotfiles repository and setting up symlinks with stow..."
 cd ~
-git clone git@github.com/anuragkumar2921/dotfiles.git || {
+git clone git@github.com:anuragkumar2921/dotfiles.git || {
   echo "Dotfiles repository already exists. Skipping clone."
 }
 cd dotfiles
