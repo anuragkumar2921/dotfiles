@@ -46,4 +46,15 @@ return {
 			-- vim.g.bullets_set_mappings = 1
 		end,
 	},
+	{
+		"opdavies/toggle-checkbox.nvim",
+		keys = {
+			{
+				"<leader>mt",
+				ft = "markdown",
+				":lua require('toggle-checkbox').toggle()<CR>",
+				desc = "Toggle checkbox",
+			},
+		},
+	},
 }
