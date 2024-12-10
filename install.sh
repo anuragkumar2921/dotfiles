@@ -20,7 +20,6 @@ brew update
 
 # List of packages to install, including stow
 packages=(
-  "kitty --cask"
   "ranger"
   "nvim"
   "eza"
@@ -34,7 +33,20 @@ packages=(
   "fzf"
   "fd"
   "ripgrep"
-  # "imagemagick" #optional
+  "imagemagick" #optional
+  "awscli"
+  "mysql"
+  "go"
+  "kitty"
+  "spotify"
+  "postman"
+  "slack"
+  "google-chrome"
+  "obsidian"
+  "docker"
+  "rectangle"
+  "mongodb-compass"
+  "sequel-ace"
 )
 
 # Function to check if a package is already installed
