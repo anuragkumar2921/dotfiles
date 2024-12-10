@@ -8,10 +8,22 @@ echo "Starting installation script..."
 
 # Check if Homebrew is installed, install if missing
 if ! command -v brew &>/dev/null; then
-  echo "Homebrew is not installed. Please install Homebrew first !"
+  echo "Homebrew is not installed. Installing Homebrew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" || {
+    echo "Failed to install Homebrew. Exiting."
+    exit 1
+  }
+  echo "Adding Homebrew to PATH temporarily..."
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
+# Verify that the brew command is available
+if ! command -v brew &>/dev/null; then
+  echo "Homebrew installation failed or brew command not found in PATH. Exiting."
   exit 1
 else
-  echo "Homebrew is installed."
+  echo "Homebrew is installed ✅ and available in PATH."
 fi
 
 # Update Homebrew
@@ -47,6 +59,7 @@ packages=(
   "rectangle"
   "mongodb-compass"
   "sequel-ace"
+  "logitech-options"
 )
 
 # Function to check if a package is already installed
