@@ -6,3 +6,6 @@ local opt = vim.opt
 
 -- opt.cmdheight = 0
 -- opt.showmode = true
+
+-- block cursor instead of line cursor(Default)
+opt.guicursor = ""

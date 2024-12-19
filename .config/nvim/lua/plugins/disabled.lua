@@ -4,6 +4,10 @@ return {
 		enabled = false,
 	},
 	{
+		"catppuccin/nvim",
+		enabled = true,
+	},
+	{
 		"akinsho/bufferline.nvim",
 		enabled = false,
 	},

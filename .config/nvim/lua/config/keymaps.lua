@@ -34,3 +34,6 @@ keymap.set("n", "<Left>", ":vertical resize -2<CR>", opts)
 -- Leetcode keymaps
 keymap.set("", "<leader>'", ":Leet run<CR>", opts)
 keymap.set("", "<leader><CR>", ":Leet submit<CR>", opts)
+
+-- paste content to the next line
+keymap.set("n", "<C-p>", "o<Esc>p", opts)

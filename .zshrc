@@ -129,6 +129,14 @@ alias leetcode='nvim leetcode.nvim'
 export VISUAL=nvim;
 export EDITOR=nvim;
 
+
+# Set Go environment variables
+export GOROOT="$(go env GOROOT)"       # Automatically fetch Go's GOROOT
+export GOPATH="$HOME/go"              # Set GOPATH (default workspace directory)
+export PATH="$PATH:$GOROOT/bin"       # Add GOROOT to PATH
+export PATH="$PATH:$GOPATH/bin"       # Add GOPATH/bin to PATH
+
+
 #load secret
 export OPENAI_API_KEY=$(<~/gpt_secret.txt)
 
