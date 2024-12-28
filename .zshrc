@@ -94,7 +94,7 @@ alias bi="brew install"
 alias bu="brew uninstall"
 
 #fd alias
-alias f="fd --type f --hidden --exclude .git | fzf | xargs nvim"
+alias f="fd --type f --hidden --exclude .git | fzf --preview='bat --color=always {}' | xargs nvim"
 
 # vim aliases
 alias vim="nvim"

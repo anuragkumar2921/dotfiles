@@ -37,3 +37,9 @@ keymap.set("", "<leader><CR>", ":Leet submit<CR>", opts)
 
 -- paste content to the next line
 keymap.set("n", "<C-p>", "o<Esc>p", opts)
+
+-- tabs
+keymap.set("n", "<leader><tab>n", "<cmd>tabnew<cr>", { desc = "New Tab" })
+keymap.set("n", "<leader><tab><tab>", "g<tab>", { desc = "go to Last visited Tab" })
+keymap.set("n", "<tab>l", "<cmd>tabnext<cr>", { desc = "go to Next Tab" })
+keymap.set("n", "<tab>h", "<cmd>tabprevious<cr>", { desc = "go to Previous Tab" })
