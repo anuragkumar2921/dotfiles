@@ -129,6 +129,8 @@ alias leetcode='nvim leetcode.nvim'
 export VISUAL=nvim;
 export EDITOR=nvim;
 
+# ghostty alias
+alias gsh="nvim ~/.config/ghostty/config"
 
 # Set Go environment variables
 export GOROOT="$(go env GOROOT)"       # Automatically fetch Go's GOROOT
