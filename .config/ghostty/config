@@ -31,7 +31,7 @@ font-synthetic-style = false
 
 # cursor style
 cursor-style = block
-adjust-cursor-height = 10
+adjust-cursor-height = 6
 cursor-color = #FFA500
 shell-integration-features = no-cursor
 mouse-hide-while-typing = true
