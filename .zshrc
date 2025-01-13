@@ -119,7 +119,8 @@ alias cd='z'
 
 # bat alias
 alias cat='bat'
-alias fz='fzf --preview="bat --color=always {}"'
+
+# fzf alias
 alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
 
 #leetcode alias
@@ -138,6 +139,20 @@ export GOPATH="$HOME/go"              # Set GOPATH (default workspace directory)
 export PATH="$PATH:$GOROOT/bin"       # Add GOROOT to PATH
 export PATH="$PATH:$GOPATH/bin"       # Add GOPATH/bin to PATH
 
+# Export fzf settings
+export FZF_CTRL_T_OPTS="
+  --walker-skip .git,node_modules,target
+  --preview 'bat -n --color=always {}'
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+
+export FZF_ALT_C_OPTS="
+  --walker-skip .git,node_modules,target
+  --preview 'tree -C {}'"
+
+export FZF_CTRL_R_OPTS="
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+  --color header:italic
+  --header 'Press CTRL-Y to copy command into clipboard'"
 
 #load secret
 export OPENAI_API_KEY=$(<~/gpt_secret.txt)

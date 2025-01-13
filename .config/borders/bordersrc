@@ -16,7 +16,7 @@ options=(
   inactive_color="$tokyo_red"
   hidpi=on
   style=round
-  width=5.0
+  width=3.0
   # blacklist="kitty"
 )
 

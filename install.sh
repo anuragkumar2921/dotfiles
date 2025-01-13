@@ -14,7 +14,7 @@ if ! command -v brew &>/dev/null; then
     exit 1
   }
   echo "Adding Homebrew to PATH temporarily..."
-  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>~/.zprofile
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
@@ -33,6 +33,7 @@ brew update
 # List of packages to install, including stow
 packages=(
   "ranger"
+  "yazi"
   "nvim"
   "eza"
   "stow" # Ensure GNU stow is installed
