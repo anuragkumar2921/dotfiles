@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# Colors taken from tokyonight theme
+tokyo_red="0xfff7768e"
+tokyo_blue="0xff7aa2f7"
+tokyo_green="0xff4fd6be"
+cat_lavender="0xffb4befe"
+cat_mauve="0xffcba6f7"
+cat_red="0xfff38ba8"
+cat_blue="0xff89b4fa"
+default_active_color=0xffe2e2e3
+default_inactive_color=0xff414550
+
+options=(
+  active_color="$tokyo_blue"
+  inactive_color="$tokyo_red"
+  hidpi=on
+  style=round
+  width=5.0
+  # blacklist="kitty"
+)
+
+borders "${options[@]}"

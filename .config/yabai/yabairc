@@ -10,11 +10,11 @@ sudo yabai --load-sa
 ###############################################################################
 
 yabai -m config layout                       bsp
-yabai -m config top_padding                  8
-yabai -m config bottom_padding               8
-yabai -m config left_padding                 8
-yabai -m config right_padding                8
-yabai -m config window_gap                   8
+yabai -m config top_padding                  12
+yabai -m config bottom_padding               12
+yabai -m config left_padding                 12
+yabai -m config right_padding                12
+yabai -m config window_gap                   12
 
 ###############################################################################
 #                               Transparency
@@ -22,7 +22,7 @@ yabai -m config window_gap                   8
 
 yabai -m config window_opacity on
 
-apps_transparent="(Notes|Reminders|Music|Obsidian|Spotify)"
+apps_transparent="(Notes|Reminders|Music|Obsidian|Spotify|Postman)"
 # less_transparent="()"
 less_transparent="(kitty|Ghostty)"
 all_transparent="(${apps_transparent}|${less_transparent})"
@@ -57,3 +57,5 @@ yabai -m config window_placement second_child
 
 # to support external_bar
 yabai -m config external_bar all:32:0
+
+borders
