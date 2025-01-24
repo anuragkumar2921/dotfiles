@@ -24,7 +24,7 @@ yabai -m config window_opacity on
 
 apps_transparent="(Notes|Reminders|Music|Obsidian|Spotify|Postman)"
 # less_transparent="()"
-less_transparent="(kitty|Ghostty)"
+less_transparent="(Ghostty)"
 all_transparent="(${apps_transparent}|${less_transparent})"
 
 # For transparent apps
@@ -58,4 +58,5 @@ yabai -m config window_placement second_child
 # to support external_bar
 yabai -m config external_bar all:32:0
 
+# to support borders
 borders
