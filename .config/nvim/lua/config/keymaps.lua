@@ -21,8 +21,8 @@ keymap.set("x", "<leader>p", [["_dP]])
 -- <leader><C-a> to increment the number.
 -- By default, C-a is the shortcut. Since, tmux prefix is C-a, its coliding
 -- Increment/decrement
-keymap.set("n", "+", "<C-a>")
-keymap.set("n", "-", "<C-x>")
+keymap.set({ "n", "v" }, "+", "<C-a>")
+keymap.set({ "n", "v" }, "-", "<C-x>")
 
 -- increment/ decrement the size of window
 -- Resize window using arrow keys
