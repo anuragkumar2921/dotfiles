@@ -41,10 +41,11 @@ theme = catppuccin-mocha
 
 # window settings
 window-theme = auto
-window-decoration = false
+window-decoration = true
+macos-titlebar-style = hidden
 window-padding-color = background
-window-padding-x = 4,0
-window-padding-y = 10,0
+window-padding-x = 7,0
+window-padding-y = 0,0
 window-padding-balance = false
 
 # adjust-cell
