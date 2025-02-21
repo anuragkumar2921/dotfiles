@@ -9,6 +9,7 @@ return {
 	},
 	{
 		"iamcco/markdown-preview.nvim",
+		requires = { "zhaozg/vim-diagram", "aklt/plantuml-syntax" },
 		event = "VeryLazy",
 		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
 		build = function()

@@ -42,9 +42,8 @@ keymap.set("", "<leader><CR>", ":Leet submit<CR>", opts)
 keymap.set("n", "<C-p>", "o<Esc>p", opts)
 
 -- tabs
-keymap.set("n", "<tab>n", ":tabnew<Return>", { desc = "New Tab", noremap = true, silent = true })
-keymap.set("n", "<tab>d", ":tabclose<Return>", { desc = "Close Tab", noremap = true, silent = true })
-keymap.set("n", "<tab>o", ":tabonly<Return>", { desc = "Close Other Tab", noremap = true, silent = true })
-keymap.set("n", "<tab><tab>", "g<tab>", { desc = "go to Last visited Tab", noremap = true, silent = true })
-keymap.set("n", "<tab>l", ":tabnext<Return>", { desc = "Next Tab", noremap = true, silent = true })
-keymap.set("n", "<tab>h", ":tabprev<Return>", { desc = "Previous Tab", noremap = true, silent = true })
+-- leader key is important as ctrl+i and tab behaves same
+keymap.set("n", "<leader><tab>n", "<cmd>tabnew<cr>", { desc = "New Tab" })
+keymap.set("n", "<leader><tab><tab>", "g<tab>", { desc = "go to Last visited Tab" })
+keymap.set("n", "<leader><tab>l", "<cmd>tabnext<cr>", { desc = "go to Next Tab" })
+keymap.set("n", "<leader><tab>h", "<cmd>tabprevious<cr>", { desc = "go to Previous Tab" })

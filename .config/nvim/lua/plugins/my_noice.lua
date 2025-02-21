@@ -15,6 +15,12 @@ return {
 			},
 			opts = { skip = true },
 		})
+		table.insert(opts.routes, {
+			filter = {
+				find = "Add 'silent=true' to hide this message.",
+			},
+			opts = { skip = true },
+		})
 		-- local focused = true
 		-- vim.api.nvim_create_autocmd("FocusGained", {
 		--   callback = function()
