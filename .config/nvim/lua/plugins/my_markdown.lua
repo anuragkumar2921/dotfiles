@@ -1,6 +1,7 @@
 return {
 	{
 		"MeanderingProgrammer/markdown.nvim",
+		event = "VeryLazy",
 		main = "render-markdown",
 		opts = {},
 		name = "render-markdown", -- Only needed if you have another plugin named markdown.nvim
@@ -8,6 +9,8 @@ return {
 	},
 	{
 		"iamcco/markdown-preview.nvim",
+		requires = { "zhaozg/vim-diagram", "aklt/plantuml-syntax" },
+		event = "VeryLazy",
 		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
 		build = function()
 			require("lazy").load({ plugins = { "markdown-preview.nvim" } })
@@ -37,6 +40,7 @@ return {
 	-- https://github.com/bullets-vim/bullets.vim
 	{
 		"bullets-vim/bullets.vim",
+		event = "VeryLazy",
 		config = function()
 			-- Disable deleting the last empty bullet when pressing <cr> or 'o'
 			-- default = 1
@@ -48,6 +52,7 @@ return {
 	},
 	{
 		"opdavies/toggle-checkbox.nvim",
+		event = "VeryLazy",
 		keys = {
 			{
 				"<leader>mt",

@@ -93,6 +93,9 @@ alias bs="brew search"
 alias bi="brew install"
 alias bu="brew uninstall"
 
+# docker alias
+alias lzd="lazydocker"
+
 #fd alias
 alias f="fd --type f --hidden --exclude .git | fzf --preview='bat --color=always {}' | xargs nvim"
 

@@ -22,9 +22,9 @@ yabai -m config window_gap                   12
 
 yabai -m config window_opacity on
 
-apps_transparent="(Notes|Reminders|Music|Obsidian|Spotify|Postman)"
+apps_transparent="(Notes|Reminders|Music|Obsidian|Spotify|Postman|Xcode)"
 # less_transparent="()"
-less_transparent="(Ghostty)"
+less_transparent="()"
 all_transparent="(${apps_transparent}|${less_transparent})"
 
 # For transparent apps
@@ -48,8 +48,14 @@ yabai -m signal --add event=window_focused app!="^${all_transparent}$" action="y
 
 # Apps excluded from window management, so you can resize them and move them around
 
-apps_mgoff_normal="(Calculator|System Preferences|System Settings|Activity Monitor|App StoreSoftware Update|Karabiner-Elements|Finder)"
+apps_mgoff_normal="(Calculator|System Preferences|System Settings|Activity Monitor|App Store|Software Update|Karabiner-Elements|Finder)"
 yabai -m rule --add app="^${apps_mgoff_normal}$" manage=off
+
+# Exclude problematic apps from being managed:
+yabai -m rule --add app="^(Calculator|Software Update|Dictionary|VLC|System Preferences|System Settings|zoom.us|Photo Booth|Archive Utility|Python|LibreOffice|App Store|Steam|Alfred|Activity Monitor)$" manage=off
+yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
+yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off
+yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
 
 
 # new window spawns to the right if vertical split, or bottom if horizontal split

@@ -1,5 +1,5 @@
 return {
-	"nvim/nvim-lspconfig",
+	"neovim/nvim-lspconfig",
 	opts = {
 		inlay_hints = { enabled = false },
 		servers = {
@@ -9,6 +9,9 @@ return {
 						buildFlags = { "-tags=wireinject,!wireinject" },
 					},
 				},
+			},
+			clangd = {
+				filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
 			},
 		},
 	},
