@@ -136,6 +136,9 @@ export EDITOR=nvim;
 # ghostty alias
 alias gsh="nvim ~/.config/ghostty/config"
 
+# kitty alias
+alias ksh="nvim ~/.config/kitty/kitty.conf"
+
 # Set Go environment variables
 export GOROOT="$(go env GOROOT)"       # Automatically fetch Go's GOROOT
 export GOPATH="$HOME/go"              # Set GOPATH (default workspace directory)
